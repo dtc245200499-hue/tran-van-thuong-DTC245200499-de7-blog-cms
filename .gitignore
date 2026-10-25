@@ -1,0 +1,7 @@
+secrets/*
+!secrets/.gitkeep
+backups/
+evidence/*
+!evidence/README.md
+__pycache__/
+*.zip
