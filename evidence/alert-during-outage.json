@@ -1,0 +1,68 @@
+{
+  "status": "success",
+  "data": {
+    "groups": [
+      {
+        "name": "blog",
+        "file": "/etc/prometheus/alerts.yml",
+        "rules": [
+          {
+            "state": "firing",
+            "name": "BlogUnavailable",
+            "query": "probe_success{job=\"blog-http\"} == 0",
+            "duration": 60,
+            "keepFiringFor": 0,
+            "labels": {
+              "severity": "critical"
+            },
+            "annotations": {
+              "summary": "Blog HTTP probe failed for one minute"
+            },
+            "alerts": [
+              {
+                "labels": {
+                  "alertname": "BlogUnavailable",
+                  "instance": "http://nginx:8080/app-health",
+                  "job": "blog-http",
+                  "severity": "critical"
+                },
+                "annotations": {
+                  "summary": "Blog HTTP probe failed for one minute"
+                },
+                "state": "firing",
+                "activeAt": "2026-10-26T03:35:23.866747207Z",
+                "value": "0e+00"
+              }
+            ],
+            "health": "ok",
+            "evaluationTime": 0.000519428,
+            "lastEvaluation": "2026-10-26T03:38:23.826108339Z",
+            "type": "alerting"
+          },
+          {
+            "state": "inactive",
+            "name": "ExporterDown",
+            "query": "up == 0",
+            "duration": 60,
+            "keepFiringFor": 0,
+            "labels": {
+              "severity": "warning"
+            },
+            "annotations": {
+              "summary": "Prometheus cannot scrape a target"
+            },
+            "alerts": [],
+            "health": "ok",
+            "evaluationTime": 5.7936E-05,
+            "lastEvaluation": "2026-10-26T03:38:23.826637323Z",
+            "type": "alerting"
+          }
+        ],
+        "interval": 60,
+        "limit": 0,
+        "evaluationTime": 0.000642222,
+        "lastEvaluation": "2026-10-26T03:38:23.826054658Z"
+      }
+    ]
+  }
+}

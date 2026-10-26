@@ -1,0 +1,11 @@
+NAME                        IMAGE                                   COMMAND                  SERVICE          CREATED          STATUS                   PORTS
+blog-cms-alloy-1            grafana/alloy:v1.10.0                   "/bin/alloy run --st…"   alloy            9 minutes ago    Up 9 minutes             
+blog-cms-blackbox-1         prom/blackbox-exporter:v0.27.0          "/bin/blackbox_expor…"   blackbox         10 minutes ago   Up 9 minutes             9115/tcp
+blog-cms-db-1               mysql:8.4                               "docker-entrypoint.s…"   db               10 minutes ago   Up 9 minutes (healthy)   3306/tcp, 33060/tcp
+blog-cms-grafana-1          grafana/grafana:12.1.0                  "/run.sh"                grafana          9 minutes ago    Up 9 minutes             127.0.0.1:3000->3000/tcp
+blog-cms-loki-1             grafana/loki:3.5.0                      "/usr/bin/loki -conf…"   loki             10 minutes ago   Up 9 minutes             3100/tcp
+blog-cms-nginx-1            nginx:stable-alpine                     "/docker-entrypoint.…"   nginx            9 minutes ago    Up 8 minutes             0.0.0.0:8080->80/tcp, [::]:8080->80/tcp
+blog-cms-nginx-exporter-1   nginx/nginx-prometheus-exporter:1.4.2   "/usr/bin/nginx-prom…"   nginx-exporter   9 minutes ago    Up 8 minutes             
+blog-cms-phpmyadmin-1       phpmyadmin:5-apache                     "/docker-entrypoint.…"   phpmyadmin       7 minutes ago    Up 7 minutes             127.0.0.1:8081->80/tcp
+blog-cms-prometheus-1       prom/prometheus:v3.5.0                  "/bin/prometheus --c…"   prometheus       10 minutes ago   Up 9 minutes             127.0.0.1:9090->9090/tcp
+blog-cms-wordpress-1        wordpress:php8.3-apache                 "docker-entrypoint.s…"   wordpress        9 minutes ago    Up About a minute        80/tcp

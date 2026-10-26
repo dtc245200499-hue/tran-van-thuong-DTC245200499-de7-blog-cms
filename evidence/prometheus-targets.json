@@ -1,0 +1,83 @@
+{
+  "status": "success",
+  "data": {
+    "activeTargets": [
+      {
+        "discoveredLabels": {
+          "__address__": "http://nginx:8080/app-health",
+          "__metrics_path__": "/probe",
+          "__param_module": "http_2xx",
+          "__scheme__": "http",
+          "__scrape_interval__": "15s",
+          "__scrape_timeout__": "10s",
+          "job": "blog-http"
+        },
+        "labels": {
+          "instance": "http://nginx:8080/app-health",
+          "job": "blog-http"
+        },
+        "scrapePool": "blog-http",
+        "scrapeUrl": "http://blackbox:9115/probe?module=http_2xx&target=http%3A%2F%2Fnginx%3A8080%2Fapp-health",
+        "globalUrl": "http://blackbox:9115/probe?module=http_2xx&target=http%3A%2F%2Fnginx%3A8080%2Fapp-health",
+        "lastError": "",
+        "lastScrape": "2026-10-26T03:39:44.589116942Z",
+        "lastScrapeDuration": 0.046173847,
+        "health": "up",
+        "scrapeInterval": "15s",
+        "scrapeTimeout": "10s"
+      },
+      {
+        "discoveredLabels": {
+          "__address__": "nginx-exporter:9113",
+          "__metrics_path__": "/metrics",
+          "__scheme__": "http",
+          "__scrape_interval__": "15s",
+          "__scrape_timeout__": "10s",
+          "job": "nginx"
+        },
+        "labels": {
+          "instance": "nginx-exporter:9113",
+          "job": "nginx"
+        },
+        "scrapePool": "nginx",
+        "scrapeUrl": "http://nginx-exporter:9113/metrics",
+        "globalUrl": "http://nginx-exporter:9113/metrics",
+        "lastError": "",
+        "lastScrape": "2026-10-26T03:39:48.98978414Z",
+        "lastScrapeDuration": 0.002103269,
+        "health": "up",
+        "scrapeInterval": "15s",
+        "scrapeTimeout": "10s"
+      },
+      {
+        "discoveredLabels": {
+          "__address__": "localhost:9090",
+          "__metrics_path__": "/metrics",
+          "__scheme__": "http",
+          "__scrape_interval__": "15s",
+          "__scrape_timeout__": "10s",
+          "job": "prometheus"
+        },
+        "labels": {
+          "instance": "localhost:9090",
+          "job": "prometheus"
+        },
+        "scrapePool": "prometheus",
+        "scrapeUrl": "http://localhost:9090/metrics",
+        "globalUrl": "http://d3e855ddf747:9090/metrics",
+        "lastError": "",
+        "lastScrape": "2026-10-26T03:39:39.318430158Z",
+        "lastScrapeDuration": 0.004257998,
+        "health": "up",
+        "scrapeInterval": "15s",
+        "scrapeTimeout": "10s"
+      }
+    ],
+    "droppedTargets": [],
+    "droppedTargetCounts": {
+      "blog-http": 0,
+      "nginx": 0,
+      "prometheus": 0
+    }
+  }
+}
